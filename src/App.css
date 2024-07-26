@@ -1,0 +1,57 @@
+body {
+    background: rgb(117, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .TodoForm {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .todo-input {
+    
+    background: none;
+    border: 1px solid #ccc1e9;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    
+  } 
+  .todo-btn {
+    
+    background: #c8a1cc;
+    color: #fff;
+    padding: 0.55rem;
+    cursor: pointer;
+  }
+  .TodoWrapper {
+    background: #b8b8da;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 5px;
+  }
+  .Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8758ff;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  .incompleted {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .completed {
+    color: #c5aeff;
+    text-decoration: line-through;
+    cursor: pointer;
+  }
+  .fa-trash {
+    margin-left: 0.75rem;
+  }
