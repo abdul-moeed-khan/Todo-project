@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Outlet, Link } from "react-router-dom";
 import TodoForm from './TodoForm'
 import EditTodoForm from './EditTodoForm';
 import Todo from './Todo';
@@ -45,11 +46,6 @@ const TodoWrapper = () => {
 
   return (
     <div>
-    <ul>
-     <li><a >API </a></li>
-     <li><a >HOME</a></li>
-      
-    </ul>
  
     <div className='TodoWrapper'>
        
@@ -64,6 +60,7 @@ const TodoWrapper = () => {
        ))}
        
     </div>
+    
     </div>
   )
 }

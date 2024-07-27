@@ -55,6 +55,14 @@ body {
   .fa-trash {
     margin-left: 0.75rem;
   }
+  .main{
+    background: #b8b8da;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+  }
   ul {
     list-style-type: none;
     margin: 0;
