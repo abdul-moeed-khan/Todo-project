@@ -43,12 +43,16 @@ const TodoWrapper = () => {
   }
 
 
-  
-
-
-
   return (
+    <div>
+    <ul>
+     <li><a >API </a></li>
+     <li><a >HOME</a></li>
+      
+    </ul>
+ 
     <div className='TodoWrapper'>
+       
       <h1>Todo List</h1>
        <TodoForm addTodo={addTodo} />
        {todos.map((todo,index)=>(
@@ -59,6 +63,7 @@ const TodoWrapper = () => {
         )
        ))}
        
+    </div>
     </div>
   )
 }
