@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import { Outlet, Link } from "react-router-dom";
 import TodoForm from './TodoForm'
 import EditTodoForm from './EditTodoForm';
 import Todo from './Todo';
@@ -49,7 +48,7 @@ const TodoWrapper = () => {
  
     <div className='TodoWrapper'>
        
-      <h1>Todo List</h1>
+      <h1>To do List</h1>
        <TodoForm addTodo={addTodo} />
        {todos.map((todo,index)=>(
          todo.isEditing ? (
