@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 function Pending() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const deleteTask = (id) => { 
+    const newTasks = tasks.filter(task => task.id !== id);
+    setTasks(newTasks);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -27,6 +34,10 @@ function Pending() {
   if (error) {
     return <h1>{error}</h1>;
   }
+ 
+  
+
+
 
   return (
     <div className="todo-list">
@@ -34,8 +45,8 @@ function Pending() {
       <ul>
         {tasks.slice(0, 10).map(task => (
           <li key={task.id}>
-            <span>{task.title}</span>
-            
+            <span>{task.title}</span>           
+            <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={()=>deleteTask(task.id)}  />
           </li>
         ))}
       </ul>
