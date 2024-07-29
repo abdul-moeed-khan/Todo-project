@@ -129,3 +129,20 @@ body {
   .filters button:hover {
     background-color: #0056b3;
   }
+  @media screen and (max-width: 380px){
+    .TodoWrapper {
+      background: #1b96b4;
+      padding: 2rem;
+      border-radius: 5px;
+      margin-left:50px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #051b08;
+      margin-left:60px;
+    }
+
+  }
