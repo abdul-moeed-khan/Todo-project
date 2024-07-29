@@ -1,5 +1,5 @@
 body {
-    background: rgb(117, 112, 112);
+    background: rgb(14, 44, 5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,9 +10,8 @@ body {
   }
 
   .todo-input {
-    
-    background: none;
-    border: 1px solid #ccc1e9;
+    background-color: rgb(209, 201, 201);
+    border: 1px solid #000000;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -21,13 +20,13 @@ body {
   } 
   .todo-btn {
     
-    background: #c8a1cc;
+    background: #542a58;
     color: #fff;
     padding: 0.55rem;
     cursor: pointer;
   }
   .TodoWrapper {
-    background: #b8b8da;
+    background: #1b96b4;
     padding: 2rem;
     border-radius: 5px;
   }
@@ -40,6 +39,7 @@ body {
     padding: 0.75rem 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    font-size:20px;
   }
   .incompleted {
     color: #fff;
@@ -66,7 +66,7 @@ body {
   
   .todo-list h1 {
     text-align: center;
-    color: #333;
+    color: #161616;
   }
   
   .todo-list ul {
@@ -81,7 +81,7 @@ body {
     border-bottom: 1px solid #ddd;
     background-color: rgb(81, 112, 180);
     margin-top: 5px;
-    font-size: 25px;
+    font-size: 20px;
   }
   
   
@@ -94,7 +94,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #0f0f0f;
+    background-color: #051b08;
   }
   
  nav li {
@@ -110,5 +110,22 @@ body {
   }
   
   li a:hover {
-    background-color: #8d0e0e;
+    background-color: #442f08;
+  }
+  .filters {
+    margin: 10px 0;
+  }
+  
+  .filters button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #542a58;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .filters button:hover {
+    background-color: #0056b3;
   }

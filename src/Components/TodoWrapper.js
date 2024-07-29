@@ -7,11 +7,15 @@ uuidv4();
 
 const TodoWrapper = () => {
   const[todos,setTodos]=useState([])
+  const [filter, setFilter] = useState('all');
+
+
   const addTodo = (todo) => {
     setTodos([
       ...todos,
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
     ]);
+    
     console.log(todos);
   }
 
@@ -41,7 +45,11 @@ const TodoWrapper = () => {
       )
     );
   }
-
+ const filteredTodos = todos.filter((todo) => {
+    if (filter === 'completed') return todo.completed;
+    if (filter === 'incompleted') return !todo.completed;
+    return true; // 'all' filter
+  });
 
   return (
     <div>
@@ -50,11 +58,17 @@ const TodoWrapper = () => {
        
       <h1>To do List</h1>
        <TodoForm addTodo={addTodo} />
-       {todos.map((todo,index)=>(
+        
+        <div className='filters'>
+          <button onClick={() => setFilter('all')}>All</button>
+          <button onClick={() => setFilter('completed')}>Completed</button>
+          <button onClick={() => setFilter('incompleted')}>Incomplete</button>
+        </div>
+       {filteredTodos.map((todo)=>(
          todo.isEditing ? (
           <EditTodoForm editTodo={editTask} task={todo} />
         ):(
-         <Todo task={todo}  key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+         <Todo task={todo}  key={todo.id} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
         )
        ))}
        
