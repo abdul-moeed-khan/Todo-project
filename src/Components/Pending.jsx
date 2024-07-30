@@ -49,18 +49,7 @@ function Pending() {
     setTasks(newTasks);
   };
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   axios.get('https://jsonplaceholder.typicode.com/todos')
-  //     .then((response) => {
-  //       setTasks(response.data);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       setError('Failed to fetch tasks.');
-  //       setLoading(false);
-  //     });
-  // }, []);
+ 
 
   if (loading) {
     return <h1>Loading...</h1>;
@@ -75,7 +64,7 @@ function Pending() {
     <div className="todo-list">
       <h1>Pending List</h1>
       <ul>
-        {tasks.slice(0, 10).map(task => (
+        {tasks.slice(0, 7).map(task => (
           <li key={task.id}>
             <span>{task.title}</span>           
             <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={()=>deleteTask(task.id)}  />

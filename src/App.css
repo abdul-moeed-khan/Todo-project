@@ -1,8 +1,11 @@
 body {
-    background: rgb(14, 44, 5);
+    background: linear-gradient(to right, #003d3a, #005f5f, #00838f);
+    /* background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
   }
   .TodoForm {
     width: 100%;
@@ -25,10 +28,14 @@ body {
     padding: 0.55rem;
     cursor: pointer;
   }
+  .todo-btn:hover{
+    background: #0056b3;
+  }
   .TodoWrapper {
     background: #1b96b4;
     padding: 2rem;
     border-radius: 5px;
+    
   }
   .Todo {
     display: flex;
@@ -70,6 +77,7 @@ body {
   }
   
   .todo-list ul {
+    margin-top:20px;
     list-style: none;
     padding: 0;
   }
@@ -90,6 +98,7 @@ body {
   }
   
   nav ul {
+  
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -110,7 +119,7 @@ body {
   }
   
   li a:hover {
-    background-color: #442f08;
+    background-color: #542a58;
   }
   .filters {
     margin: 10px 0;
@@ -130,19 +139,14 @@ body {
     background-color: #0056b3;
   }
   @media screen and (max-width: 380px){
+   
     .TodoWrapper {
-      background: #1b96b4;
-      padding: 2rem;
-      border-radius: 5px;
-      margin-left:50px;
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #051b08;
+      
       margin-left:60px;
+    } 
+     nav ul {
+      
+      margin-left:70px;
     }
 
-  }
+  } 
